@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header-morty />
+    <main-morty />
+    <footer-morty />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import HeaderMorty from '@/components/HeaderMorty.vue';
+import MainMorty from '@/components/MainMorty.vue';
+import FooterMorty from '@/components/FooterMorty.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    HeaderMorty,
+    MainMorty,
+    FooterMorty,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "~bootstrap/scss/bootstrap";
 </style>
