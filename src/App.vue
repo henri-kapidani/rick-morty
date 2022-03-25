@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header-morty />
-    <main-morty />
+    <header-morty @ricerca-rilanciata="setStrSearch" />
+    <main-morty :stringa-ricerca="strSearch" />
     <footer-morty />
   </div>
 </template>
@@ -17,6 +17,16 @@ export default {
     HeaderMorty,
     MainMorty,
     FooterMorty,
+  },
+  data() {
+    return {
+      strSearch: '',
+    };
+  },
+  methods: {
+    setStrSearch(argomentoEvento) {
+      this.strSearch = argomentoEvento;
+    },
   },
 };
 </script>
